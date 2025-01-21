@@ -13,6 +13,7 @@ from transformers import pipeline
 import nltk
 nltk.download('cmudict')
 nltk.download('wordnet')
+# it's not worked
 
 class AIJarvis:
     def __init__(self, root):
