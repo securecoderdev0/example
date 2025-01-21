@@ -1,0 +1,87 @@
+{
+    "smart_bulb": {
+        "DEVICE_ID" = "d7926bd5d70a3d6cf0nf7s",
+      "device_key": "your_device_key",
+      "device_ip": "your_device_ip",
+      "name": "Living Room Light",
+      "capabilities": {
+        "brightness": {
+          "min": 0,
+          "max": 100,
+          "default": 100
+        },
+        "colors": [
+          "red",
+          "green",
+          "blue",
+          "white",
+          "yellow",
+          "purple",
+          "orange",
+          "pink"
+        ],
+        "power_state": {
+          "on": true,
+          "off": false
+        }
+      }
+    },
+    "commands": {
+      "turn_on": {
+        "description": "Turn on the smart bulb",
+        "parameters": []
+      },
+      "turn_off": {
+        "description": "Turn off the smart bulb",
+        "parameters": []
+      },
+      "set_brightness": {
+        "description": "Set the brightness level (0-100)",
+        "parameters": [
+          {
+            "name": "brightness",
+            "type": "integer",
+            "range": {
+              "min": 0,
+              "max": 100
+            }
+          }
+        ]
+      },
+      "set_color": {
+        "description": "Set the color of the smart bulb",
+        "parameters": [
+          {
+            "name": "color",
+            "type": "string",
+            "allowed_values": [
+              "red",
+              "green",
+              "blue",
+              "white",
+              "yellow",
+              "purple",
+              "orange",
+              "pink"
+            ]
+          }
+        ]
+      }
+    },
+    "error_handling": {
+      "common_errors": {
+        "device_not_found": "Please ensure the device is powered on and connected to the network.",
+        "invalid_command": "Sorry, I did not understand that. Please try rephrasing your command.",
+        "connection_error": "There seems to be a connection issue. Please check your internet connection."
+      }
+    },
+    "voice_commands": {
+      "examples": [
+        "turn on the living room light",
+        "turn off the light",
+        "set brightness to 50",
+        "change the light color to blue"
+      ]
+    }
+  }
+  
